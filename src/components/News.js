@@ -23,7 +23,7 @@ export class News extends Component {
 
     handlePrevClick = async ()=>{
         console.log("Prev");
-        let url =`https://newsapi.org/v2/top-headlines?country=in&apiKey=e33da568b72b4bb4bcf80b7619a50ad7&page=&{this.state.page - 1}&pageSize=20`;
+        let url =`https://newsapi.org/v2/top-headlines?country=in&apiKey=e33da568b72b4bb4bcf80b7619a50ad7&page=${this.state.page - 1}&pageSize=20`;
         let data = await fetch(url);
         let parsedData = await data.json();
         console.log(parsedData);    
